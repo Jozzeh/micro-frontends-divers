@@ -77,10 +77,7 @@ module.exports = function (app) {
       angularpodlet.fetch(incoming),
     ]);
 
-    content.forEach(element => {
-      incoming.css = incoming.css.concat(element.css);
-      incoming.js = incoming.js.concat(element.js);
-    })
+    incoming.podlets = content;
     incoming.view.title = "Home Page";
 
     res.podiumSend(`<div class="demo-header">
