@@ -1,0 +1,23 @@
+{
+  "name": "reactpod",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "podiumstart": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test",
+    "demo",
+    "podium",
+    "pod"
+  ],
+  "author": "Jozzeh",
+  "license": "ISC",
+  "dependencies": {
+    "@podium/podlet": "^4.3.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}

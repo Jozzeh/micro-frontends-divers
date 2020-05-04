@@ -1,0 +1,20 @@
+{
+  "name": "prepodium",
+  "version": "1.0.0",
+  "description": "demo podium lib",
+  "main": "index.js",
+  "scripts": {
+    "installAll": "cd ./sveltepod && npm install && cd ../reactpod && yarn && cd ../reactnav && yarn && cd ../htmlpod && npm install && cd ../htmlbuspod && npm install && cd ../vuepod && npm install && cd ../angularpod && npm install && cd ../fullapp && npm install",
+    "startAll": "(cd ./sveltepod && npm run podiumstart) & (cd ./reactpod && npm run podiumstart) & (cd ./reactnav && npm run podiumstart) & (cd ./htmlpod && npm run podiumstart) & (cd ./htmlbuspod && npm run podiumstart) & (cd ./vuepod && npm run podiumstart) & (cd ./angularpod && npm run podiumstart) & (cd ./fullapp && npm run start)",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "demo",
+    "test",
+    "podium",
+    "micro",
+    "front-end"
+  ],
+  "author": "Jozzeh",
+  "license": "ISC"
+}

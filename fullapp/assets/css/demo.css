@@ -1,0 +1,61 @@
+body{
+  line-height: 1.3;
+}
+.demo-header{
+  width: 100vw;
+  border-bottom: solid 1px #ccc;
+  padding: 15px;
+  background-color: #192d52;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+.demo-navigation{
+  width: 100vw;
+  border-bottom: solid 2px #ccc;
+  padding: 2px 0;
+  margin-bottom: 10px;
+  background-color: #f5f5f5;
+}
+.demo-container{
+  display: flex;
+  justify-content: center;
+}
+.demo-flex{
+  width: 900px;
+  display: flex;
+  padding: 15px;
+}
+.demo-leftpanel{
+  width: 300px;
+  padding-right: 15px;
+}
+.demo-left-svelte {
+  background-color: #ff3e00;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.demo-left-svelte img, .demo-left-html img,  .demo-left-vue img{
+  max-width: 75px;
+  height: auto;
+}
+.demo-left-html{
+  box-sizing: border-box;
+  padding: 15px;
+  border: solid 1px #f1f1f1;
+  text-align: center;
+  width: 100%;
+  margin: 15px 0;
+}
+.demo-content{
+  flex: 1;
+}
+.demo-footer{
+  font-size: 10px;
+  color: #666;
+  width: 100vw;
+  border-top: solid 1px #ccc;
+  padding: 15px 0;
+  margin-top: 15px;
+  text-align: center;
+}
