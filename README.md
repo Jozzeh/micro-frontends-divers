@@ -1,6 +1,8 @@
 # micro-frontends-divers
 This is a demo to load vanilla HTML, React, Vue, Angular and Svelte frameworks/libraries in 1 single page (using Podium).
 
+![alt text](https://www.josdeberdt.be/assets/imgs/other/micro-frontend-screen-02.png "Image of the front-ends on 1 page")
+
 ## How to start  
 This application combines popular front-end libraries and frameworks in 1 page.  
 
