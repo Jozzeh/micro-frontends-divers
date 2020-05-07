@@ -17,9 +17,6 @@ const podlet = new Podlet({
 let rawdata = fs.readFileSync('build/asset-manifest.json');
 let assets = JSON.parse(rawdata);
 
-// podlet.js({ value: 'https://unpkg.com/react@16/umd/react.production.min.js', crossorigin:'', type:'application/javascript' });
-// podlet.js({ value: 'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js', crossorigin:'', type:'application/javascript' });
-
 assets.entrypoints.forEach((element, index) => {
   if(element.indexOf('.css') !== -1){
     let elementFinal = element.replace('static/', '');
@@ -43,5 +40,8 @@ app.get(podlet.manifest(), (req, res) => {
   res.status(200).send(podlet);
 });
 
+app.get('/:name', (req, res) => {
+  res.status(200).podiumSend('<div id="reactpod"></div>');
+});
 
 app.listen(process.env.PORT);

@@ -117,4 +117,59 @@ module.exports = function (app) {
     </div>
     `);
   });
+
+  app.get("/demo/:name", async (req, res) => {
+    const incoming = res.locals.podium;
+    const content = await Promise.all([
+      htmlpodlet.fetch(incoming),
+      reactpodlet.fetch(incoming, { pathname: '/'+req.params.name }),
+      reactnavpodlet.fetch(incoming),
+      sveltepodlet.fetch(incoming),
+      htmlbuspodlet.fetch(incoming),
+      vuepodlet.fetch(incoming),
+      angularpodlet.fetch(incoming),
+    ]);
+
+    content.forEach(element => {
+      incoming.css = incoming.css.concat(element.css);
+      incoming.js = incoming.js.concat(element.js);
+    })
+    incoming.view.title = "Demo Page";
+
+    res.podiumSend(`<div class="demo-header">
+      DEMO : HTML + React + Svelte + Vue + Angular
+    </div>
+    <div class="demo-navigation">
+      ${content[2]}
+    </div>
+    <div class="demo-container">
+      <div class="demo-flex">
+        <div class="demo-leftpanel">
+          <div class="demo-left-svelte">
+            <img src="/images/svelte.png"/><br/>
+            ${content[3]}
+          </div>
+          <div class="demo-left-vue">
+            ${content[5]}
+          </div>
+        </div>
+        <div class="demo-content">
+          <div style="background-color: #ccc; padding: 15px;">
+          ${content[1]}
+          </div>
+          <div class="demo-left-html">
+            <img src="/images/html.png"/><br/>
+            ${content[4]}
+          </div>
+          <div class="angdiv">
+            ${content[6]}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="demo-footer">
+      ${content[0]}
+    </div>
+    `);
+  });
 };
