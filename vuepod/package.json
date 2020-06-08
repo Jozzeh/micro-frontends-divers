@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@podium/browser": "^1.0.0-beta.2",
-    "@podium/podlet": "^4.3.2",
+    "@podium/podlet": "^4.3.3",
     "core-js": "^3.6.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
